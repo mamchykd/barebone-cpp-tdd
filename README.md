@@ -1,5 +1,9 @@
 # Barebone Cpp TDD Template
 
+## The repo
+
+    [TDD template for CMake-based C++ projects](https://github.com/mamchykd/barebone-cpp-tdd)
+
 
 ## Dependencies
 
