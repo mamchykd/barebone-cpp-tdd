@@ -1,0 +1,24 @@
+#!/bin/bash
+rm -rf build/*
+rm -rf install/*
+rm -rf CMakeCache.txt
+rm -rf CMakeFiles/
+rm -rf CTestTestfile.cmake
+rm -rf DartConfiguration.tcl
+rm -rf Makefile
+rm -rf Testing
+rm -rf cmake_install.cmake
+rm -rf install_manifest.txt
+rm -rf test/CMakeFiles/
+rm -rf test/CTestTestfile.cmake
+rm -rf test/Makefile
+rm -rf test/cmake_install.cmake
+rm -rf test/uit/CMakeFiles/
+rm -rf test/uit/CTestTestfile.cmake
+rm -rf test/uit/Makefile
+rm -rf test/uit/cmake_install.cmake
+rm -rf test/ut/CMakeFiles/
+rm -rf test/ut/CTestTestfile.cmake
+rm -rf test/ut/Makefile
+rm -rf test/ut/cmake_install.cmake
+echo "clean_cache done"

@@ -1,0 +1,14 @@
+// [error id]:[filename]:[line]
+// [error id]:[filename2]
+// [error id]
+
+ConfigurationNotChecked
+cppcheckError
+missingIncludeSystem
+missingInclude
+toomanyconfigs
+unmatchedSuppression
+unusedFunction
+unusedScopedObject
+*:external/*
+*:test/*
