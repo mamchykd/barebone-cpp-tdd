@@ -67,7 +67,7 @@ if [[ "${IN_PLACE}" = "False" ]]; then
     for f in "${needs_formatting[@]}"; do
       echo "  $f"
     done
-    echo "Run with '--in-place' to apply formatting."
+    echo "Run with '--in-place' to apply formatting. Exit 1"
     exit 1
   fi
 fi

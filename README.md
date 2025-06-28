@@ -1,8 +1,7 @@
 # Barebone Cpp TDD Template
 
-## The repo
-
-    [TDD template for CMake-based C++ projects](https://github.com/mamchykd/barebone-cpp-tdd)
+The repo:
+[TDD template for CMake-based C++ projects](https://github.com/mamchykd/barebone-cpp-tdd)
 
 
 ## Dependencies
@@ -33,13 +32,13 @@
     The files are installed into ./install local folder by default
     To set a different location, use --cmake-options flag:
 
-    $ ./build.sh --run-install 
+    $ ./build.sh --run-install --cmake-options=-DCMAKE_INSTALL_PREFIX:PATH=<your install dir>
 
 
 
 ## Build with gcc
   
-    ./gcc_build_and_run_uit.sh
+    $ ./gcc_build_and_run_uit.sh
 
 
 ## Build and run unit tests

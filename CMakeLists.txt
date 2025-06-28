@@ -1,12 +1,18 @@
 cmake_minimum_required(VERSION 3.2.0)
 set(CMAKE_CXX_STANDARD 17)
-
-set(CORE_PROJECT_NAME BareboneTD)
-set(CORE_LIB_NAME barebone-tdd)
-set(CORE_APP_NAME run-barebone-tdd)
 set(BIN_DESTINATION bin)
 
-project ($CORE_PROJECT_NAME)
+if(NOT DEFINED CMAKE_PROJECT_NAME)
+    set(CMAKE_PROJECT_NAME barebone-tdd)
+endif()
+
+set(CORE_LIB_NAME ${CMAKE_PROJECT_NAME})
+set(CORE_APP_NAME run-${CMAKE_PROJECT_NAME})
+project ($CMAKE_PROJECT_NAME)
+
+message(STATUS "CMake starts building ${CMAKE_PROJECT_NAME} project..")
+message(STATUS "${CMAKE_PROJECT_NAME} includes ${CORE_LIB_NAME} library and ${CORE_APP_NAME} app")
+
 
 if(CMAKE_EXPORT_COMPILE_COMMANDS)
     set(CMAKE_CXX_STANDARD_INCLUDE_DIRECTORIES ${CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES})
@@ -52,7 +58,7 @@ endif()
 
 # install project outputs
 if (PERFORM_INSTALL)
-    message(STATUS "CMake starts installing ${CORE_PROJECT_NAME} files to the specified locations..")
+    message(STATUS "CMake starts installing ${PROJECT_NAME} files to the specified location..")
 
     #install(TARGETS "${CORE_LIB_NAME}" DESTINATION "lib/${CORE_LIB_NAME}")
     install(FILES "${CORE_HEADERS_LIST}" DESTINATION "include/${CORE_LIB_NAME}")

@@ -22,7 +22,7 @@ if (BUILD_TESTING)
     # Test
     add_executable(barebone_tdd_test barebone_TDD_test.cpp run_all_tests.cpp)
     set_target_properties(barebone_tdd_test PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
-    target_link_libraries(barebone_tdd_test "${CMAKE_SOURCE_DIR}/build/libbarebone-tdd.so" ${CPPUTEST_LDFLAGS})
+    target_link_libraries(barebone_tdd_test "${CMAKE_SOURCE_DIR}/build/lib${CORE_LIB_NAME}.so" ${CPPUTEST_LDFLAGS})
 
     enable_testing()
     add_test(NAME BareboneTDD_test COMMAND barebone_tdd_test)
